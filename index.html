@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>QR GEN</title>
+		<meta
+			name="author"
+			content="Rupam Barui"
+		/>
+		<meta
+			name="description"
+			content="QR code generator that converts basic strings and url into QR codes"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./favicon/favicon-16x16.png"
+		/>
+		<link
+			rel="manifest"
+			href="./favicon/site.webmanifest"
+		/>
+		<link
+			rel="stylesheet"
+			href="style.css"
+		/>
+	</head>
+	<body>
+        <div class="wrapper">
+            <header>
+                <h1>QR Code Generator</h1>
+                <p>Paste a URL or enter a text to create a QR code</p>
+            </header>
+            <div class="form">
+                <input type="text" placeholder="Enter a URL or text">
+                <button>Generate QR Code</button>
+            </div>
+            <div class="qr-code">
+                <img src="qr-code.png" alt="qr-code">
+            </div>
+        </div>
+    </body>
+</html>
