@@ -26,6 +26,10 @@ body {
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.wrapper.active {
+	height: 530px;
+}
+
 header h1 {
 	font-size: 21px;
 	font-weight: 500;
@@ -82,4 +86,10 @@ header p {
 	justify-content: center;
 	opacity: 0;
 	pointer-events: none;
+}
+
+.wrapper.active .qr-code {
+	opacity: 1;
+	pointer-events: auto;
+	transition: opacity 0.5s 0.05s ease;
 }
