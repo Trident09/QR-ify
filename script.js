@@ -24,9 +24,26 @@ qrInput.addEventListener("keyup", () => {
     }
 })
 
-downloadBtn.addEventListener("click", () => {
-	let imgSrc = qrImg.getAttribute("src");
-	downloadLink.download = "QR Code";
-	downloadLink.href = imgSrc;
-	downloadLink.click();
-})
+downloadLink.addEventListener("click", async (event) => {
+    event.preventDefault(); // Prevent the default link behavior
+
+    try {
+        // Fetch the QR code image using the provided URL
+        const response = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=${qrInput.value}`);
+        const blob = await response.blob();
+        const blobUrl = URL.createObjectURL(blob);
+
+        // Create a temporary link element for downloading
+        const downloadTempLink = document.createElement("a");
+        downloadTempLink.href = blobUrl;
+        downloadTempLink.download = "QR_Code.png";
+
+        // Programmatically click the temporary link to initiate download
+        downloadTempLink.click();
+
+        // Clean up by revoking the Blob URL
+        URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+        console.error("Error downloading QR code:", error);
+    }
+});
