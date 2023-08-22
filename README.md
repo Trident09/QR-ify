@@ -8,6 +8,8 @@ This is a QR code generator which turns links into QR codes
 4. Click the "Generate QR Code" button
 5. Scan the QR code with your phone
 
+p.s. you need to have a internet connection for this to work because the QR code is generated using an API call
+
 ## How it works
 The QR code is generated using the [QR code API](https://goqr.me/api/)
 
