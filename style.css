@@ -35,6 +35,13 @@ header h1 {
 	font-weight: 500;
 }
 
+header a {
+	text-decoration: none;
+	color: #3498db;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
 header p {
 	margin-top: 5px;
 	color: #474747;
@@ -90,6 +97,32 @@ header p {
 
 .wrapper.active .qr-code {
 	opacity: 1;
-	pointer-events: auto;
 	transition: opacity 0.5s 0.05s ease;
+}
+
+.dwn {
+	display:grid;
+	grid-template-columns: 1fr 0.1fr;
+	align-items: center;
+}
+
+.download-btn {
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	justify-content: center;
+	height: 100%;
+	opacity: 0;
+	font-size: 21px;
+	transition: all 0.3s ease-in-out;
+}
+
+.download-btn.active {
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+}
+
+.download:hover i {
+	color: #2980b9;
+	scale: 1.5;
 }
